@@ -67,18 +67,18 @@ sudo chown deploy:www-data $www/$domain/info.php
 ####                                                            ####
 ####    Create virtual host file, enable and restart apache     ####
 ####                                                            ####
-echo "<VirtualHost *:80>
-        ServerAdmin maintenance@hackrobats.net
-        ServerName www.$domain
-        ServerAlias $domain *.$domain 
-        ServerAlias $name.510interactive.com $name.hackrobats.net
-        ServerAlias $name.5ten.co $name.cascadiacollective.net $name.cascadiaweb.net
-        DocumentRoot $www/$domain
-        ErrorLog $www/$domain/logs/error.log
-        CustomLog $www/$domain/logs/access.log combined
-        DirectoryIndex index.php
-</VirtualHost>" > /etc/apache2/sites-available/$domain
-a2ensite $domain && service apache2 reload
+#echo "<VirtualHost *:80>
+#        ServerAdmin maintenance@hackrobats.net
+#        ServerName www.$domain
+#        ServerAlias $domain *.$domain 
+#        ServerAlias $name.510interactive.com $name.hackrobats.net
+#        ServerAlias $name.5ten.co $name.cascadiacollective.net $name.cascadiaweb.net
+#        DocumentRoot $www/$domain
+#        ErrorLog $www/$domain/logs/error.log
+#        CustomLog $www/$domain/logs/access.log combined
+#        DirectoryIndex index.php
+#</VirtualHost>" > /etc/apache2/sites-available/$domain
+#a2ensite $domain && service apache2 reload
 ####                                                            ####
 ####    Create site structure using Drush Make                  ####
 ####                                                            ####
